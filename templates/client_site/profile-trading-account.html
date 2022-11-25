@@ -1,0 +1,48 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    {% include 'client_site/components/profile-header.html' %}
+
+    <div class="card mb-5 mb-xl-10">
+        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+             data-bs-target="#kt_account_profile_details" aria-expanded="true"
+             aria-controls="kt_account_profile_details">
+            <div class="card-title m-0">
+                <h3 class="fw-bold m-0">Trading account</h3>
+            </div>
+        </div>
+
+        <div class="card card-flush">
+            <div class="card-body pt-0">
+                <table class="table align-middle table-row-dashed fs-6 gy-5">
+                    <thead>
+                    <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                        <th>Account Number</th>
+                        <th>Group</th>
+                        <th>Leverage</th>
+                        <th>Balance</th>
+                        <th>Equity</th>
+                        <th>Credit</th>
+                        <th>Account Status</th>
+                    </tr>
+                    </thead>
+                    <tbody class="fw-semibold text-gray-600">
+                    <tr>
+                        <td class="pe-0">10000889</td>
+                        <td class="pe-0">Standard</td>
+                        <td class="pe-0">1:500</td>
+                        <td class="pe-0">1,000.00</td>
+                        <td class="pe-0">2,000.00</td>
+                        <td class="pe-0">1,000.00</td>
+                        <td class="pe-0">
+                            <div class="badge badge-light-primary">Enable</div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

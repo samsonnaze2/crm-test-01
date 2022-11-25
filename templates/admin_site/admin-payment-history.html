@@ -1,0 +1,68 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <div class="card card-flush">
+
+        <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+            <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                <div class="w-100 mw-150px">
+                    <select class="form-select form-select-solid" data-control="select2" data-hide-search="true"
+                            data-placeholder="Status" data-kt-ecommerce-product-filter="status">
+                        <option></option>
+                        <option value="all">All</option>
+                        <option value="published">Published</option>
+                        <option value="scheduled">Scheduled</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body pt-0">
+            <table class="table align-middle table-row-dashed fs-6 gy-5">
+                <thead>
+                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                    <th class="min-w-70px">Name</th>
+                    <th class="text-end">Client ID</th>
+                    <th class="text-end">Account Number</th>
+                    <th class="text-end">IB</th>
+                    <th class="text-end">Payment Code</th>
+                    <th class="text-end">Type</th>
+                    <th class="text-end">Original Amount</th>
+                    <th class="text-end">Converted Amount</th>
+                    <th class="text-end">Created Time</th>
+                    <th class="text-end">Payment Status</th>
+                    <th class="text-end">Processed Time</th>
+                    <th class="text-end">Payment Method</th>
+                    <th class="text-end">Action</th>
+                </tr>
+                </thead>
+                <tbody class="fw-semibold text-gray-600">
+                <tr>
+                    <td>
+                        <span class="fw-bold">ABC</span>
+                    </td>
+                    <td class="text-end pe-0">123</td>
+                    <td class="text-end pe-0">100000889</td>
+                    <td class="text-end pe-0">xyz</td>
+                    <td class="text-end pe-0">QWERTY</td>
+                    <td class="text-end pe-0">Deposit</td>
+                    <td class="text-end pe-0">USD 1,000.00</td>
+                    <td class="text-end pe-0">VND 24,000,00.00</td>
+                    <td class="text-end pe-0">22:10 25-11-2022</td>
+                    <td class="text-end pe-0">
+                        <div class="badge badge-light-primary">Approved</div>
+                    </td>
+                    <td class="text-end pe-0">22:10 25-11-2022</td>
+                    <td class="text-end pe-0">PSP Name 1</td>
+                    <td class="text-end">
+                        Action
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

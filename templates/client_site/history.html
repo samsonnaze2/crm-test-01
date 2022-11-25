@@ -1,0 +1,77 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <div class="card card-flush">
+        <!--begin::Card header-->
+        <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+            <!--begin::Card toolbar-->
+            <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                <div class="w-100 mw-150px">
+                    <!--begin::Select2-->
+                    <select class="form-select form-select-solid" data-control="select2" data-hide-search="true"
+                            data-placeholder="Status" data-kt-ecommerce-product-filter="status">
+                        <option></option>
+                        <option value="all">All</option>
+                        <option value="published">Published</option>
+                        <option value="scheduled">Scheduled</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                    <!--end::Select2-->
+                </div>
+            </div>
+            <!--end::Card toolbar-->
+        </div>
+        <!--end::Card header-->
+        <!--begin::Card body-->
+        <div class="card-body pt-0">
+            <!--begin::Table-->
+            <table class="table align-middle table-row-dashed fs-6 gy-5" id="kt_ecommerce_products_table">
+                <!--begin::Table head-->
+                <thead>
+                <!--begin::Table row-->
+                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                    <th>No</th>
+                    <th class="text-end min-w-100px">Code</th>
+                    <th class="text-end min-w-70px">Type</th>
+                    <th class="text-end min-w-100px">Create time</th>
+                    <th class="text-end min-w-100px">Amount</th>
+                    <th class="text-end min-w-150px">Status</th>
+                    <th class="text-end min-w-150px">Complete</th>
+                </tr>
+                <!--end::Table row-->
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+                <tbody class="fw-semibold text-gray-600">
+                <tr>
+                    <!--begin::Category=-->
+                    <td>
+                        <span class="fw-bold">1</span>
+                    </td>
+                    <!--end::Category=-->
+                    <!--begin::SKU=-->
+                    <td class="text-end pe-0">
+                        <span class="fw-bold">123456</span>
+                    </td>
+                    <!--end::SKU=-->
+                    <!--begin::Qty=-->
+                    <td class="text-end pe-0" data-order="16">
+                        <div class="badge badge-light-primary">Deposit</div>
+                    </td>
+                    <td class="text-end pe-0">7/10/2022 08:00</td>
+                    <td class="text-end pe-0">10,000.00</td>
+                    <td class="text-end pe-0">
+                        <div class="badge badge-light-primary">Pending</div>
+                    </td>
+                    <td class="text-end pe-0">7/10/2022 08:00</td>
+                </tr>
+                </tbody>
+                <!--end::Table body-->
+            </table>
+            <!--end::Table-->
+        </div>
+        <!--end::Card body-->
+    </div>
+
+{% endblock %}

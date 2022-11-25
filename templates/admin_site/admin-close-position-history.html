@@ -1,0 +1,71 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <div class="card card-flush">
+
+        <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+            <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                <div class="w-100 mw-150px">
+                    <select class="form-select form-select-solid" data-control="select2" data-hide-search="true"
+                            data-placeholder="Status" data-kt-ecommerce-product-filter="status">
+                        <option></option>
+                        <option value="all">All</option>
+                        <option value="published">Published</option>
+                        <option value="scheduled">Scheduled</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body pt-0">
+            <table class="table align-middle table-row-dashed fs-6 gy-5">
+                <thead>
+                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                    <th class="min-w-70px">Position ID</th>
+                    <th class="text-end">Account Number</th>
+                    <th class="text-end">Open Time</th>
+                    <th class="text-end">Type</th>
+                    <th class="text-end">Volume</th>
+                    <th class="text-end">Symbol</th>
+                    <th class="text-end">Open Price</th>
+                    <th class="text-end">TP</th>
+                    <th class="text-end">SL</th>
+                    <th class="text-end">Close Time</th>
+                    <th class="text-end">Close Price</th>
+                    <th class="text-end">Commission</th>
+                    <th class="text-end">Swap</th>
+                    <th class="text-end">Profit</th>
+                    <th class="text-end">Raw Spread</th>
+                    <th class="text-end">Markup Spread</th>
+                </tr>
+                </thead>
+                <tbody class="fw-semibold text-gray-600">
+                <tr>
+                    <td>
+                        <span class="fw-bold">ABC</span>
+                    </td>
+                    <td class="text-end pe-0">100000001</td>
+                    <td class="text-end pe-0">100000889</td>
+                    <td class="text-end pe-0">2022.11.25 15:37:30</td>
+                    <td class="text-end pe-0">Buy</td>
+                    <td class="text-end pe-0">0.01</td>
+                    <td class="text-end pe-0">XAUUSD</td>
+                    <td class="text-end pe-0">1234.56</td>
+                    <td class="text-end pe-0">1234.56</td>
+                    <td class="text-end pe-0">1234.56</td>
+                    <td class="text-end pe-0">2022.11.25 15:37:30</td>
+                    <td class="text-end pe-0">1234.56</td>
+                    <td class="text-end pe-0">-0.1</td>
+                    <td class="text-end pe-0">-0.1</td>
+                    <td class="text-end pe-0">-0.1</td>
+                    <td class="text-end pe-0">10</td>
+                    <td class="text-end pe-0">10</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

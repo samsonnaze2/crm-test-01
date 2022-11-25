@@ -1,0 +1,66 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+
+    <div class="card card-flush">
+
+        <div class="card-header align-items-center py-5 gap-2 gap-md-5">
+            <div class="card-toolbar flex-row-fluid justify-content-end gap-5">
+                <div class="w-100 mw-150px">
+                    <select class="form-select form-select-solid" data-control="select2" data-hide-search="true"
+                            data-placeholder="Status" data-kt-ecommerce-product-filter="status">
+                        <option></option>
+                        <option value="all">All</option>
+                        <option value="published">Published</option>
+                        <option value="scheduled">Scheduled</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body pt-0">
+            <table class="table align-middle table-row-dashed fs-6 gy-5">
+                <thead>
+                <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
+                    <th class="min-w-70px">Account Number</th>
+                    <th class="text-end">Client ID</th>
+                    <th class="text-end">Name</th>
+                    <th class="text-end">Group</th>
+                    <th class="text-end">Leverage</th>
+                    <th class="text-end">Balance</th>
+                    <th class="text-end">Equity</th>
+                    <th class="text-end">Credit</th>
+                    <th class="text-end">Account Status</th>
+                    <th class="text-end">IB</th>
+                </tr>
+                </thead>
+                <tbody class="fw-semibold text-gray-600">
+                <tr>
+                    <td>
+                        <span class="fw-bold">100000889</span>
+                    </td>
+                    <td class="text-end pe-0">
+                        <span class="fw-bold ms-3">
+                            <a href="/profile">123</a>
+                        </span>
+                    </td>
+                    <td class="text-end pe-0" data-order="16">
+                        <span class="fw-bold ms-3">ABC</span>
+                    </td>
+                    <td class="text-end pe-0">Standard</td>
+                    <td class="text-end pe-0">1:500</td>
+                    <td class="text-end pe-0">$1,000.00</td>
+                    <td class="text-end pe-0">$2,000.00</td>
+                    <td class="text-end pe-0">$100.00</td>
+                    <td class="text-end pe-0">
+                        <div class="badge badge-light-primary">Enable</div>
+                    </td>
+                    <td class="text-end pe-0">xyz</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
