@@ -24,7 +24,9 @@ SECRET_KEY = 'django-insecure-p*-v6mbd#1@deuf7f-eztkl#t@+-6!x*k5&hq9z2_f5=xgz)z!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "oyster-app-8kora.ondigitalocean.app"
+]
 
 # Application definition
 
