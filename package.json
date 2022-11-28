@@ -1,0 +1,27 @@
+{
+	"name": "python_crm_site",
+	"version": "1.0.0",
+	"description": "",
+	"private": true,
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/samsonnaze2/crm-test-01.git"
+	},
+	"author": "Kittiphong Jittanupagorn",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/samsonnaze2/crm-test-01/issues"
+	},
+	"homepage": "https://github.com/samsonnaze2/crm-test-01#readme",
+	"devDependencies": {
+		"@babel/core": "^7.20.2",
+		"@babel/preset-env": "^7.20.2",
+		"babel-loader": "^9.1.0",
+		"prettier": "2.8.0",
+		"webpack": "^5.75.0",
+		"webpack-cli": "^5.0.0"
+	}
+}

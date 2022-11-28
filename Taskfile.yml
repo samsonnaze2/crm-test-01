@@ -1,0 +1,15 @@
+version: "3"
+
+tasks:
+  start:
+    cmds:
+      - python3 manage.py runserver
+    silent: false
+  bd:
+    cmds:
+      - npx webpack build --mode=production
+    silent: false
+  format:
+    cmds:
+      - npx prettier --write .
+    silent: false

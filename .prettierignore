@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+coverage
+admin_site
+assets
+node_modules
+python_crm_site
+venv
+*.html
