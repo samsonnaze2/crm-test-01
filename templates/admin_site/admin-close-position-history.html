@@ -1,4 +1,5 @@
 {% extends "layout/base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -20,52 +21,36 @@
         </div>
 
         <div class="card-body pt-0">
-            <table class="table align-middle table-row-dashed fs-6 gy-5">
+            <table id="table-admin-close-position-history"
+                   class="table table-striped table-row-bordered gy-5 gs-7 dataTable no-footer">
                 <thead>
                 <tr class="text-start text-gray-400 fw-bold fs-7 text-uppercase gs-0">
                     <th class="min-w-70px">Position ID</th>
-                    <th class="text-end">Account Number</th>
-                    <th class="text-end">Open Time</th>
-                    <th class="text-end">Type</th>
-                    <th class="text-end">Volume</th>
-                    <th class="text-end">Symbol</th>
-                    <th class="text-end">Open Price</th>
-                    <th class="text-end">TP</th>
-                    <th class="text-end">SL</th>
-                    <th class="text-end">Close Time</th>
-                    <th class="text-end">Close Price</th>
-                    <th class="text-end">Commission</th>
-                    <th class="text-end">Swap</th>
-                    <th class="text-end">Profit</th>
-                    <th class="text-end">Raw Spread</th>
-                    <th class="text-end">Markup Spread</th>
+                    <th>Account Number</th>
+                    <th>Open Time</th>
+                    <th>Type</th>
+                    <th>Volume</th>
+                    <th>Symbol</th>
+                    <th>Open Price</th>
+                    <th>TP</th>
+                    <th>SL</th>
+                    <th>Close Time</th>
+                    <th>Close Price</th>
+                    <th>Commission</th>
+                    <th>Swap</th>
+                    <th>Profit</th>
+                    <th>Raw Spread</th>
+                    <th>Markup Spread</th>
                 </tr>
                 </thead>
-                <tbody class="fw-semibold text-gray-600">
-                <tr>
-                    <td>
-                        <span class="fw-bold">ABC</span>
-                    </td>
-                    <td class="text-end pe-0">100000001</td>
-                    <td class="text-end pe-0">100000889</td>
-                    <td class="text-end pe-0">2022.11.25 15:37:30</td>
-                    <td class="text-end pe-0">Buy</td>
-                    <td class="text-end pe-0">0.01</td>
-                    <td class="text-end pe-0">XAUUSD</td>
-                    <td class="text-end pe-0">1234.56</td>
-                    <td class="text-end pe-0">1234.56</td>
-                    <td class="text-end pe-0">1234.56</td>
-                    <td class="text-end pe-0">2022.11.25 15:37:30</td>
-                    <td class="text-end pe-0">1234.56</td>
-                    <td class="text-end pe-0">-0.1</td>
-                    <td class="text-end pe-0">-0.1</td>
-                    <td class="text-end pe-0">-0.1</td>
-                    <td class="text-end pe-0">10</td>
-                    <td class="text-end pe-0">10</td>
-                </tr>
-                </tbody>
             </table>
         </div>
+
+        <button id="btn-clear">Clear</button>
     </div>
 
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static 'scripts/admin_close_position_history.min.js' %}"></script>
 {% endblock %}

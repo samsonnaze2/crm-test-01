@@ -6,8 +6,10 @@ tasks:
       - python3 manage.py runserver
     silent: false
   bd:
+    deps: [format]
     cmds:
-      - npx webpack build --mode=production
+      #      - npx webpack build --mode=production
+      - npx webpack build --mode=development
     silent: false
   format:
     cmds:
