@@ -2,7 +2,6 @@ const path = require("path")
 
 module.exports = {
 	entry: {
-		client_home: path.resolve(__dirname, "./src/pages/home/index.js"),
 		admin_close_position_history: path.resolve(__dirname, "./src/pages/admin-close-position-history/index.js"),
 	},
 	module: {
