@@ -17,7 +17,12 @@ class AdminClosePositionHistoryPageController {
 
 	loadDataTable() {
 		const dataList = this.service.getData()
-		this.table.data(dataList, {
+		this.table.data(dataList.data, {
+			page: dataList.page,
+			total: dataList.total,
+			onChange: (page, pageLimit, totalPage, total) => {
+				console.log({ page, pageLimit, totalPage, total })
+			},
 			row: (data, _) => `
                 <td>${data.position_id}</td>
                 <td>${data.account_number}</td>
