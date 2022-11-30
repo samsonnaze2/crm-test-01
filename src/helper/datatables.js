@@ -29,7 +29,7 @@ export default class Datatable {
 		document.querySelector(`#${this.id} tbody`).innerHTML = str_builder
 		this.init()
 		this.makeButtonsPagination(options.total, options.onChange)
-		this.makeDropdownPageLength()
+		this.makeDropdownPageLength(options.onChange)
 	}
 
 	makeButtonsPagination(dataLength, onChange) {
@@ -119,7 +119,7 @@ export default class Datatable {
 		}
 	}
 
-	makeDropdownPageLength() {
+	makeDropdownPageLength(onChange) {
 		document.querySelector(`#${this.id}_wrapper > div.row > div:nth-child(1)`).innerHTML = `
             <div class="dataTables_length" id="${this.id}_length">
                 <label>
@@ -130,9 +130,22 @@ export default class Datatable {
                     </select>
                 </label>
             </div>`
+
+		document.querySelector(`#${this.id}_length`).addEventListener("change", (e) => {
+			this.pageLimit = parseInt(e.target.value)
+
+			if (onChange) {
+				onChange(this.page, this.pageLimit, this.totalPage, this.total)
+			}
+		})
 	}
 
 	makeDataTableLengthOptions() {
-		return `<option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option>`
+		const arr = [10, 25, 50, 100]
+		let str_builder = ""
+		arr.forEach((v) => {
+			str_builder += `<option value="${v}" ${v === this.pageLimit ? "selected" : ""}">${v}</option>`
+		})
+		return str_builder
 	}
 }
